@@ -1,0 +1,20 @@
+{
+  "name": "community-newsletter-v2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^5.3.0"
+  },
+  "scripts": {
+    "client": "yarn workspace @my-app/client",
+    "common": "yarn workspace @my-app/common",
+    "server": "yarn workspace @my-app/server",
+    "dev": "yarn client dev & yarn server dev --verbose",
+    "start": "yarn server start"
+  }
+}
